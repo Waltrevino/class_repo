@@ -1,0 +1,26 @@
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+.carouselbox {
+  width: 500px;
+  height: 350px;
+  cursor: pointer;
+  border: solid;
+}
+
+.buttons {
+  margin-top: 1em;
+  text-align: center;
+}
+
+button {}
+
+img {
+  margin: 0 auto;
+}
+
+.prev {}
+
+.next {}

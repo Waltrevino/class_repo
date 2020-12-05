@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Number Checker</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <h1 class="text-center">Number Guesser</h1>
+    <h2 class="text-center">See if you can guess the number the computer is thinker of!</h2>
+  </div>
+
+  <div class="container">
+
+    <div class="card mt-1">
+      <div class="card-header">
+        <div class="card-body text-center">
+          <h3 class="card-title">Computer Pick</h3>
+          <h1 id="computer-pick">???</h1>
+        </div>
+      </div>
+
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-body text-center">
+            <h3 class="card-title">You Pick</h3>
+            <button id="button-1" class="btn btn-danger btn-choice" value="1">
+              <h1>1</h1>
+            </button>
+            <button id="button-2" class="btn btn-danger btn-choice" value="2">
+              <h1>2</h1>
+            </button>
+            <button id="button-3" class="btn btn-danger btn-choice" value="3">
+              <h1>3</h1>
+            </button>
+            <button id="button-4" class="btn btn-danger btn-choice" value="4">
+              <h1>4</h1>
+            </button>
+          </div>
+        </div>
+
+        <div class="card mt-1">
+          <div class="card-header">
+            <div class="card-body text-center">
+              <h3 class="card-title">Result</h3>
+              <h1 id="result"></h1>
+            </div>
+          </div>
+
+        </div>
+
+        <script type="text/javascript">
+          $(document).ready(function() {
+            var gamePlayable = true;
+            $(".btn").on("click", function() {
+              if (gamePlayable === true) {
+                var myPick = $(this).val();
+                var computerPick = Math.floor(Math.random() * 4) + 1;
+                $("#computer-pick").text(computerPick);
+                console.log(parseInt(myPick));
+                console.log(computerPick);
+                if (parseInt(myPick) === computerPick) {
+                  console.log("WINNER!");
+                  gamePlayable = false;
+                  $("#result").text("Winner. Refresh to play again.");
+                } else {
+                  gamePlayable = false;
+                  $("#result").text("LOSER. Refresh to play again");
+                  console.log("loser!");
+                }
+              }
+
+            })
+          })
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 32px;
+    font-size: 24px;
+}
+
+#fixed {
+    background: grey;
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+#wrapper {
+    width: 600px;
+    margin: 0 auto;
+    
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+#relative {
+    position: relative;
+    height: 200px;
+    text-align: center;
+    background: #eee;
+    padding: 20px;
+}
+
+#absolute {
+    position: absolute;
+    background: #999;
+    bottom: 0;
+    right: -30px;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}

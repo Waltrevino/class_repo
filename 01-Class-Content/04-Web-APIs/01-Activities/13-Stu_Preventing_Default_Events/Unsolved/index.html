@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container border">
+    <h1>Tip Calculator</h1>
+    <h4></h4>
+    <form id="form" class="form border border-primary">
+      <label for="">Enter the total price of your meal below</label>
+      <input class="float-right" id="xxx" type="text" placeholder="0.00" required autofocus/>
+      <br> <br><br><br>
+      <label for="tip-percent" class="border">Tip percent</label>
+      <input class="float-right border" type="text" id="tip-percent" placeholder="%00" />
+      <br><br><br>
+      <label for="tip-amount" class="border">Tip amount</label>
+      <label class="float-right" for="" id="tip-amount">$0.00</label>
+      <br><br><br>
+      <label for="" class="border">Total</label>
+      <label class="float-right" for="" id="total">$0.00</label>
+      <br><br><br>
+      <button id="submit">Calculate Tip</button>
+    </form>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

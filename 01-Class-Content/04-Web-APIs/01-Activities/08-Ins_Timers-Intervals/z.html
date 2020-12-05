@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 class="time"></h1>
+  <div id="main"></div>
+
+  <script>
+    var elCountDownMessage = document.querySelector(".time");
+    var elMain = document.querySelector("#main");
+    var elImage = document.createElement("img");
+    var segundos = 5;
+
+    function beginTimer() {
+      var timerInterval = setInterval(function() {
+        segundos--;
+        elCountDownMessage.textContent = segundos + " before explosion begins.";
+
+        if (segundos === 0) {
+          clearInterval(timerInterval);
+          mandaMensaje();
+        }
+
+      }, 1000)
+    }
+
+    function mandaMensaje() {
+      alert("works!");
+    }
+
+    function mandaMensaje() {
+      elCountDownMessage.textContent = "";
+      elImage.setAttribute("src", "./images/image_1.jpg");
+      elImage.setAttribute("alt", "pic....");
+      elMain.appendChild(elImage);
+
+    }
+
+    beginTimer();
+  </script>
+</body>
+
+</html>

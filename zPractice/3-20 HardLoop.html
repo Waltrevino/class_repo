@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+        for (var i = 0; i < myFarm.length; i++){
+            
+            console.log(myFarm[i]);
+
+            if (myFarm[i].charAt(0) === "c" || myFarm[i].charAt(0) === "o") {
+                console.log(myFarm[i] + " begins with a 'c' or 'o'");
+            } else {
+                console.log(myFarm[i] + " DOES NOT begin with a 'c' or an 'o'");
+            }
+        }
+    </script>
+</body>
+</html>
